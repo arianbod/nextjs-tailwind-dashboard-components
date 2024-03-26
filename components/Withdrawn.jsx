@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CommissionCard, WithdrawnTitleLeft, WithdrawnTitleRight } from './';
 import briefCase from '@/public/assets/svg/withdrawn/briefcase.svg';
 import blueDollar from '@/public/assets/svg/withdrawn/blueDollar.svg';
@@ -9,12 +9,15 @@ import dollar from '@/public/assets/svg/withdrawn/dollar.svg';
 import increase from '@/public/assets/svg/withdrawn/increase.svg';
 import Image from 'next/image';
 const Withdrawn = () => {
-	const [showSensitive, setShowSensitive] = useState(
-		localStorage.getItem('showSensitive') || false
-	);
+	const [showSensitive, setShowSensitive] = useState(false);
 	const showSensitiveFn = (amount) => {
 		return showSensitive ? amount : '***';
 	};
+	useEffect(() => {
+		const storedShowSensitive =
+			localStorage.getItem('showSensitive') === 'true';
+		setShowSensitive(storedShowSensitive);
+	}, []);
 	return (
 		<div className='grid grid-cols-1 gap-4'>
 			<div className='bg-pLightGreen text-pGreen flex justify-between align-middle relative p-6 py-12 shadow-md'>
@@ -39,7 +42,10 @@ const Withdrawn = () => {
 						src={blinkImg}
 						width={20}
 						height={30}
-						onClick={() => setShowSensitive(!showSensitive)}
+						onClick={() => (
+							localStorage.setItem('showSensitive', !showSensitive),
+							setShowSensitive(!showSensitive)
+						)}
 						className='cursor-pointer'
 					/>
 				</div>
