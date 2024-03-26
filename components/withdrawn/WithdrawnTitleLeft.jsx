@@ -13,13 +13,13 @@ const WithdrawnTitleLeft = ({ title, svg, amount }) => {
 			</div>
 			{/* title */}
 			<div>
-				<h5 className='font-black  text-2xl mb-2 capitalize'>
+				<h5 className='font-black  md:text-2xl mb-2 capitalize text-lg'>
 					{title}
 				</h5>
 			</div>
 
 			{/* amount */}
-			<div className='font-extrabold text-3xl'>${amount}</div>
+			<div className='font-extrabold md:text-2xl text-lg'>${amount}</div>
 		</div>
 	);
 };
