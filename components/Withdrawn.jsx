@@ -1,12 +1,14 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { CommissionCard, WithdrawnTitleLeft, WithdrawnTitleRight } from './';
-import briefCase from '@/public/assets/svg/withdrawn/briefcase.svg';
-import blueDollar from '@/public/assets/svg/withdrawn/blueDollar.svg';
-import information from '@/public/assets/svg/withdrawn/information.svg';
-import blinkImg from '@/public/assets/svg/withdrawn/blink.svg';
-import dollar from '@/public/assets/svg/withdrawn/dollar.svg';
-import increase from '@/public/assets/svg/withdrawn/increase.svg';
+import {
+	briefCaseImg,
+	blueDollarImg,
+	informationImg,
+	blinkImg,
+	dollarImg,
+	increaseImg,
+} from './';
 import Image from 'next/image';
 const Withdrawn = () => {
 	const [showSensitive, setShowSensitive] = useState(false);
@@ -24,7 +26,7 @@ const Withdrawn = () => {
 				<div>
 					<WithdrawnTitleLeft
 						title='Withdrawn'
-						svg={dollar}
+						svg={dollarImg}
 						amount={showSensitiveFn('22,748')}
 						color='primary'
 					/>
@@ -32,7 +34,7 @@ const Withdrawn = () => {
 				<div>
 					<WithdrawnTitleRight
 						title='%10 increase'
-						svg={increase}
+						svg={increaseImg}
 						text='from last week'
 						color='primary'
 					/>
@@ -58,19 +60,19 @@ const Withdrawn = () => {
 				<div>
 					<CommissionCard
 						title='Potential Commission'
-						svg={briefCase}
+						svg={briefCaseImg}
 						amount={showSensitiveFn('2,443')}
 						color='primary'
 					/>
 					<CommissionCard
 						title='Earned Commission'
-						svg={blueDollar}
+						svg={blueDollarImg}
 						amount={showSensitiveFn('2,443')}
 						color='pBlue'
 					/>
 					<CommissionCard
 						title='Refund'
-						svg={information}
+						svg={informationImg}
 						amount={showSensitiveFn('2,443')}
 						color='pRed'
 					/>
@@ -78,19 +80,19 @@ const Withdrawn = () => {
 				<div>
 					<CommissionCard
 						title='Potential Commission'
-						svg={briefCase}
+						svg={briefCaseImg}
 						amount={showSensitiveFn('2,443')}
 						color='primary'
 					/>
 					<CommissionCard
 						title='Earned Commission'
-						svg={blueDollar}
+						svg={blueDollarImg}
 						amount={showSensitiveFn('2,443')}
 						color='pBlue'
 					/>
 					<CommissionCard
 						title='Refund'
-						svg={information}
+						svg={informationImg}
 						amount={showSensitiveFn('2,443')}
 						color='pRed'
 					/>
