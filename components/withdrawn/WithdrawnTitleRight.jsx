@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const WithdrawnTitleLeft = ({ title, svg, text }) => {
 	return (
-		<div className={`grid grid-cols-1 max-w-20 min-w-40`}>
+		<div className={`grid grid-cols-1 max-w-20 min-w-40 align-middle`}>
 			{/* icon */}
 			<div>
 				<Image
@@ -14,11 +14,11 @@ const WithdrawnTitleLeft = ({ title, svg, text }) => {
 			</div>
 			{/* title */}
 			<div>
-				<h5 className={`font-bold text-secondary`}>{title}</h5>
+				<h5 className={`font-bold text-sm text-pGreen capitalize`}>{title}</h5>
 			</div>
 
 			{/* amount */}
-			<div className='text-pGrey'>{text}</div>
+			<div className='text-pGrey text-sm'>{text}</div>
 		</div>
 	);
 };

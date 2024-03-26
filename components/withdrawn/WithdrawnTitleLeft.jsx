@@ -8,17 +8,18 @@ const WithdrawnTitleLeft = ({ title, svg, amount }) => {
 				<Image
 					alt={title}
 					src={svg}
-					width={30}
-					height={20}
+					width={24}
 				/>
 			</div>
 			{/* title */}
 			<div>
-				<h5 className='font-medium capitalize'>{title}</h5>
+				<h5 className='font-black  text-2xl mb-2 capitalize'>
+					{title}
+				</h5>
 			</div>
 
 			{/* amount */}
-			<div className='font-extrabold text-xl'>${amount}</div>
+			<div className='font-extrabold text-3xl'>${amount}</div>
 		</div>
 	);
 };
