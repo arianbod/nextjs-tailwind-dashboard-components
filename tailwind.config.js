@@ -25,8 +25,11 @@ module.exports = {
         pOrange: '#E39735',
         pLightOrange: '#FEEDCD',
         pLightGrey: '#F6F6F6'
-      }, fontFamily: { poppins: ['poppins'] },
-
+      },
+      fontFamily: { poppins: ['poppins'] },
+      fontSize: {
+        extraSm: '0.6rem'
+      }
     },
   },
   plugins: [],
