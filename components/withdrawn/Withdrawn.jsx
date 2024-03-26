@@ -29,7 +29,7 @@ const Withdrawn = () => {
 	return (
 		<div className='grid grid-cols-1 gap-4 bg-white rounded-3xl overflow-hidden pb-12 relative sm:h-screen md:h-auto'>
 			{/* top side*/}
-			<div className='bg-pLightGreen text-pGreen flex justify-between py-4 px-4 align-middle md:px-6 md:py-12 place-items-center'>
+			<div className='bg-pLightGreen text-pGreen grid grid-cols-2 px-0 gap-8 py-6 md:py-12 place-items-center'>
 				<div>
 					<WithdrawnTitleLeft
 						title='Withdrawn'
@@ -81,10 +81,11 @@ const Withdrawn = () => {
 			</div>
 			{/* absolute position elements */}
 			{/* the blink */}
-			<div className='absolute top-10 right-10'>
+			<div className='absolute top-5 right-5 md:top-10 md:right-10'>
 				<Image
 					src={blinkImg}
 					width={20}
+					alt='hide/show sensitive data'
 					height={30}
 					onClick={() => (
 						localStorage.setItem('showSensitive', !showSensitive),
