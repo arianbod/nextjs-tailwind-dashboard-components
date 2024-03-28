@@ -27,7 +27,7 @@ const Withdrawn = () => {
 		setShowSensitive(storedShowSensitive);
 	}, []);
 	return (
-		<div className='grid grid-cols-1 gap-4 bg-white rounded-3xl overflow-hidden pb-12 relative sm:h-screen md:h-auto'>
+		<div className='grid grid-cols-1 gap-4 bg-white rounded-3xl overflow-hidden pb-12 relative sm:min-h-screen md:h-auto'>
 			{/* top side*/}
 			<div className='bg-pLightGreen text-pGreen grid grid-cols-2 px-0 gap-8 py-6 md:py-12 place-items-center'>
 				<div>
